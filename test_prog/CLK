@@ -1,0 +1,48 @@
+#! /usr/bin/vvp
+:ivl_version "11.0 (stable)" "(v11_0)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 10;
+:vpi_module "/usr/lib/ivl/system.vpi";
+:vpi_module "/usr/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/ivl/va_math.vpi";
+S_0x556eb8b1fb00 .scope module, "clock" "clock" 2 2;
+ .timescale -9 -10;
+    .port_info 0 /INPUT 1 "clk1";
+    .port_info 1 /OUTPUT 1 "clk2";
+o0x7fc44155b048 .functor BUFZ 1, C4<z>; HiZ drive
+L_0x556eb8b423f0 .functor BUFZ 1, o0x7fc44155b048, C4<0>, C4<0>, C4<0>;
+v0x556eb8afd0b0_0 .net "clk1", 0 0, L_0x556eb8b423f0;  1 drivers
+v0x556eb8afce50_0 .net "clk2", 0 0, o0x7fc44155b048;  0 drivers
+S_0x556eb8afad70 .scope module, "test" "test" 3 2;
+ .timescale -9 -10;
+v0x556eb8b42330_0 .var "clk1", 0 0;
+    .scope S_0x556eb8afad70;
+T_0 ;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x556eb8b42330_0, 0, 1;
+    %end;
+    .thread T_0;
+    .scope S_0x556eb8afad70;
+T_1 ;
+    %delay 50, 0;
+    %load/vec4 v0x556eb8b42330_0;
+    %inv;
+    %store/vec4 v0x556eb8b42330_0, 0, 1;
+    %jmp T_1;
+    .thread T_1;
+    .scope S_0x556eb8afad70;
+T_2 ;
+    %vpi_call 3 16 "$dumpvars" {0 0 0};
+    %vpi_call 3 17 "$display", "test started" {0 0 0};
+    %delay 100, 0;
+    %vpi_call 3 19 "$finish" {0 0 0};
+    %end;
+    .thread T_2;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "clock.v";
+    "testbench.v";

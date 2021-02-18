@@ -1,0 +1,212 @@
+$date
+	Sun Feb 14 00:04:42 2021
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	100ps
+$end
+$scope module test $end
+$var wire 1 ! q $end
+$var wire 1 " not_q $end
+$var reg 1 # clk $end
+$var reg 1 $ data $end
+$scope module d_ff_1 $end
+$var wire 1 # clk $end
+$var wire 1 $ data $end
+$var wire 1 ! q $end
+$var wire 1 " not_q $end
+$var wire 1 % bridge $end
+$scope module master $end
+$var wire 1 $ data $end
+$var wire 1 & enable $end
+$var wire 1 ' reset $end
+$var wire 1 ( set $end
+$var wire 1 % q $end
+$var wire 1 ) not_q $end
+$scope module sr_1 $end
+$var wire 1 * a $end
+$var wire 1 + b $end
+$var wire 1 ) not_q $end
+$var wire 1 % q $end
+$var wire 1 ' reset $end
+$var wire 1 ( set $end
+$upscope $end
+$upscope $end
+$scope module slave $end
+$var wire 1 % data $end
+$var wire 1 # enable $end
+$var wire 1 , reset $end
+$var wire 1 - set $end
+$var wire 1 ! q $end
+$var wire 1 " not_q $end
+$scope module sr_1 $end
+$var wire 1 . a $end
+$var wire 1 / b $end
+$var wire 1 " not_q $end
+$var wire 1 ! q $end
+$var wire 1 , reset $end
+$var wire 1 - set $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+x/
+x.
+0-
+0,
+x+
+x*
+x)
+x(
+x'
+1&
+x%
+x$
+0#
+x"
+x!
+$end
+#20
+0'
+0(
+0&
+x,
+x-
+0$
+1#
+#40
+1*
+1)
+0+
+0%
+1'
+1&
+0,
+0-
+0#
+#60
+1.
+1"
+0/
+0!
+0'
+0&
+1,
+1#
+#80
+1'
+1&
+0,
+0#
+#100
+&
+0,
+0#
+#100
+0
+1+
+1%
+0*
+0)
+1(
+1&
+0,
+0#
+1$
+#70
+1/
+1!
+0.
+0"
+0(
+0&
+1-
+1#
+#80
+1(
+1&
+0-
+0#
+#90
+0(
+0&
+1-
+1#
+#100
+1(
+1&
+0-
+0#
+#110
+0(
+0&
+1-
+1#
+#120
+1(
+1&
+0-
+0#
+#130
+0(
+0&
+1-
+1#
+#140
+1*
+1)
+0+
+0%
+1'
+1&
+0-
+0#
+0$
+#150
+1.
+1"
+0/
+0!
+0'
+0&
+1,
+1#
+#160
+1+
+1%
+0*
+0)
+1(
+1&
+0,
+0#
+1$
+#170
+1/
+1!
+0.
+0"
+0(
+0&
+1-
+1#
+#180
+1(
+1&
+0-
+0#
+#190
+0(
+0&
+1-
+1#
+#200
+1(
+1&
+0-
+0#

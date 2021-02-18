@@ -1,0 +1,61 @@
+#! /usr/bin/vvp
+:ivl_version "11.0 (stable)" "(v11_0)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 10;
+:vpi_module "/usr/lib/ivl/system.vpi";
+:vpi_module "/usr/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/ivl/va_math.vpi";
+S_0x55d24778d390 .scope module, "test" "test" 2 2;
+ .timescale -9 -10;
+v0x55d2477b20c0_0 .net "not_q", 0 0, L_0x55d2477b2850;  1 drivers
+v0x55d2477b2180_0 .net "q", 0 0, L_0x55d2477b2650;  1 drivers
+v0x55d2477b2220_0 .var "reset", 0 0;
+v0x55d2477b22c0_0 .var "set", 0 0;
+S_0x55d24779fcc0 .scope module, "sr_1" "sr" 2 8, 3 2 0, S_0x55d24778d390;
+ .timescale -9 -10;
+    .port_info 0 /INPUT 1 "set";
+    .port_info 1 /INPUT 1 "reset";
+    .port_info 2 /OUTPUT 1 "q";
+    .port_info 3 /OUTPUT 1 "not_q";
+L_0x55d2477b2390 .functor BUFZ 1, L_0x55d2477b2650, C4<0>, C4<0>, C4<0>;
+L_0x55d2477b2480 .functor BUFZ 1, L_0x55d2477b2850, C4<0>, C4<0>, C4<0>;
+L_0x55d2477b2540 .functor OR 1, v0x55d2477b2220_0, L_0x55d2477b2480, C4<0>, C4<0>;
+L_0x55d2477b2650 .functor NOT 1, L_0x55d2477b2540, C4<0>, C4<0>, C4<0>;
+L_0x55d2477b2740 .functor OR 1, v0x55d2477b22c0_0, L_0x55d2477b2390, C4<0>, C4<0>;
+L_0x55d2477b2850 .functor NOT 1, L_0x55d2477b2740, C4<0>, C4<0>, C4<0>;
+v0x55d24779ff10_0 .net *"_ivl_4", 0 0, L_0x55d2477b2540;  1 drivers
+v0x55d2477b1ab0_0 .net *"_ivl_8", 0 0, L_0x55d2477b2740;  1 drivers
+v0x55d2477b1b90_0 .net "a", 0 0, L_0x55d2477b2480;  1 drivers
+v0x55d2477b1c30_0 .net "b", 0 0, L_0x55d2477b2390;  1 drivers
+v0x55d2477b1cf0_0 .net "not_q", 0 0, L_0x55d2477b2850;  alias, 1 drivers
+v0x55d2477b1e00_0 .net "q", 0 0, L_0x55d2477b2650;  alias, 1 drivers
+v0x55d2477b1ec0_0 .net "reset", 0 0, v0x55d2477b2220_0;  1 drivers
+v0x55d2477b1f80_0 .net "set", 0 0, v0x55d2477b22c0_0;  1 drivers
+    .scope S_0x55d24778d390;
+T_0 ;
+    %vpi_call 2 11 "$dumpvars" {0 0 0};
+    %vpi_call 2 12 "$display", "test started" {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x55d2477b22c0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x55d2477b2220_0, 0, 1;
+    %delay 50, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x55d2477b22c0_0, 0, 1;
+    %delay 50, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x55d2477b22c0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x55d2477b2220_0, 0, 1;
+    %delay 100, 0;
+    %vpi_call 2 26 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "test_sr.v";
+    "sr.v";
