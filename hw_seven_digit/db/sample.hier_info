@@ -1,0 +1,149 @@
+|top
+CLK => CLK.IN2
+DS_EN1 << data_display:Data_display.anodes
+DS_EN2 << data_display:Data_display.anodes
+DS_EN3 << data_display:Data_display.anodes
+DS_EN4 << data_display:Data_display.anodes
+DS_A << data_display:Data_display.segments
+DS_B << data_display:Data_display.segments
+DS_C << data_display:Data_display.segments
+DS_D << data_display:Data_display.segments
+DS_E << data_display:Data_display.segments
+DS_F << data_display:Data_display.segments
+DS_G << data_display:Data_display.segments
+
+
+|top|clk_div:Clk_div
+clk => cnt[0].CLK
+clk => cnt[1].CLK
+clk => cnt[2].CLK
+clk => cnt[3].CLK
+clk => cnt[4].CLK
+clk => cnt[5].CLK
+clk => cnt[6].CLK
+clk => cnt[7].CLK
+clk => cnt[8].CLK
+clk => cnt[9].CLK
+clk => cnt[10].CLK
+clk => cnt[11].CLK
+clk => cnt[12].CLK
+clk => cnt[13].CLK
+clk => cnt[14].CLK
+clk => cnt[15].CLK
+clk => cnt[16].CLK
+clk => cnt[17].CLK
+clk => cnt[18].CLK
+clk => cnt[19].CLK
+clk => cnt[20].CLK
+clk_div <= cnt[20].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|clk_div_10:Clk_div_10
+clk => cnt[0].CLK
+clk => cnt[1].CLK
+clk => cnt[2].CLK
+clk => cnt[3].CLK
+clk => cnt[4].CLK
+clk => cnt[5].CLK
+clk => cnt[6].CLK
+clk => cnt[7].CLK
+clk => cnt[8].CLK
+clk => cnt[9].CLK
+clk_div <= cnt[9].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|data_display:Data_display
+clk_sec => Data[0].CLK
+clk_sec => Data[1].CLK
+clk_sec => Data[2].CLK
+clk_sec => Data[3].CLK
+clk_sec => Data[4].CLK
+clk_sec => Data[5].CLK
+clk_sec => Data[6].CLK
+clk_sec => Data[7].CLK
+clk_sec => Data[8].CLK
+clk_sec => Data[9].CLK
+clk_sec => Data[10].CLK
+clk_sec => Data[11].CLK
+clk_sec => Data[12].CLK
+clk_sec => Data[13].CLK
+clk_sec => Data[14].CLK
+clk_sec => Data[15].CLK
+clk_10 => i[0].CLK
+clk_10 => i[1].CLK
+clk_10 => segments[0]~reg0.CLK
+clk_10 => segments[1]~reg0.CLK
+clk_10 => segments[2]~reg0.CLK
+clk_10 => segments[3]~reg0.CLK
+clk_10 => segments[4]~reg0.CLK
+clk_10 => segments[5]~reg0.CLK
+clk_10 => segments[6]~reg0.CLK
+anodes[0] <= ShiftLeft0.DB_MAX_OUTPUT_PORT_TYPE
+anodes[1] <= ShiftLeft0.DB_MAX_OUTPUT_PORT_TYPE
+anodes[2] <= ShiftLeft0.DB_MAX_OUTPUT_PORT_TYPE
+anodes[3] <= ShiftLeft0.DB_MAX_OUTPUT_PORT_TYPE
+segments[0] <= segments[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+segments[1] <= segments[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+segments[2] <= segments[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+segments[3] <= segments[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+segments[4] <= segments[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+segments[5] <= segments[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+segments[6] <= segments[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|data_display:Data_display|data_to_seg:Data_to_seg_1
+data[0] => Decoder0.IN3
+data[1] => Decoder0.IN2
+data[2] => Decoder0.IN1
+data[3] => Decoder0.IN0
+seg[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+seg[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+seg[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+seg[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+seg[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+seg[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+seg[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|data_display:Data_display|data_to_seg:Data_to_seg_2
+data[0] => Decoder0.IN3
+data[1] => Decoder0.IN2
+data[2] => Decoder0.IN1
+data[3] => Decoder0.IN0
+seg[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+seg[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+seg[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+seg[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+seg[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+seg[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+seg[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|data_display:Data_display|data_to_seg:Data_to_seg_3
+data[0] => Decoder0.IN3
+data[1] => Decoder0.IN2
+data[2] => Decoder0.IN1
+data[3] => Decoder0.IN0
+seg[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+seg[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+seg[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+seg[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+seg[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+seg[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+seg[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|data_display:Data_display|data_to_seg:Data_to_seg_4
+data[0] => Decoder0.IN3
+data[1] => Decoder0.IN2
+data[2] => Decoder0.IN1
+data[3] => Decoder0.IN0
+seg[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+seg[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+seg[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+seg[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+seg[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+seg[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+seg[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+

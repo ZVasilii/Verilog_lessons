@@ -1,0 +1,2 @@
+Info (10281): Verilog HDL Declaration information at top.v(6): object "CLK_DIV" differs only in case from object "Clk_div" in the same scope File: /home/vasilii/microcontrollers/verilog/hw_seven_digit/top.v Line: 6
+Info (10281): Verilog HDL Declaration information at top.v(7): object "CLK_DIV_10" differs only in case from object "Clk_div_10" in the same scope File: /home/vasilii/microcontrollers/verilog/hw_seven_digit/top.v Line: 7
